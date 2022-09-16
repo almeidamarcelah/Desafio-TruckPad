@@ -19,11 +19,21 @@ export const FormStep3 = () => {
         }
     }, []);
 
+    // const handleNextStep = () => {
+    //     if(state.email !== '' && state.github !== '') {
+    //         console.log(state);
+    //     } else {
+    //         alert("Preencha os dados");
+    //     }
+    // }
+
     const handleNextStep = () => {
-        if(state.email !== '' && state.github !== '') {
+        if(state.birthdate && state.name !== '')  {
+            history.push('/step4');
             console.log(state);
+            alert("Seu cadastrado foi realizado com sucesso!");
         } else {
-            alert("Preencha os dados");
+            alert("Preencha os dados.");
         }
     }
 
